@@ -1,0 +1,73 @@
+import os
+import pywhatkit 
+import wikipedia
+def shutdown():
+               os.system("shutdown /s")
+def instargram():
+                 print(
+  """
+  from instabot import Bot
+
+  # Initialize the bot
+  bot = Bot()
+
+  # Login to your Instagram account
+  bot.login(username='your_username', password='your_password')
+
+  # Upload a picture
+  bot.upload_photo(r'path_to_your_image.jpg', caption='Your caption goes here')
+
+  # Logout from your account
+  bot.logout()""")
+
+def whatapp():
+              print("""note :enter number in this formate("+91xxxxxxxxx")""")
+              mob= input("enter mobile number ")
+              message= input("enter your message")
+              h=input("enter time in hour")
+              mi= input("enter time in minute")
+              pywhatkit.sendwhatmsg(mob, message, int(h), int(mi))
+
+def function():
+               type_search= input("Search:")
+               print(wikipedia.page(type_search).content)
+def notepad():
+              os.system("notepad")
+def chrome():
+             os.system("chrome")
+ 
+            
+
+
+while 8<9:
+          print(
+         """           \t\t\t\t\t\t welcome to my project...\n
+               \t\t\t\t\t\t-------------------------\n
+   
+  press 1 for shutdown your pc
+  press 2 Post on instagram
+  press 3 to exit
+  press 4 to send whatapp
+  press 5 search any topic on wikipedia
+  press 6 to open notepad
+  press 7 to open chrome 
+
+  """)
+          x=input("enter your choice: ")
+          print(x)
+          if int(x)==1:
+                       shutdown()
+          elif int(x)==2:
+                         instargram()
+    
+ 
+          elif int(x)==3:
+                         break
+          elif int(x)==4:
+                        whatapp()
+          elif int(x)==5:
+                         function()
+          elif int(x)==6:
+                         notepad()
+          elif int(x)==7:
+                         chrome()
